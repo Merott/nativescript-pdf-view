@@ -1,10 +1,10 @@
 {
-  "name": "nativescript-pdf-viewer-demo",
+  "name": "nativescript-pdf-view-demo",
   "main": "app.js",
   "private": true,
   "dependencies": {
     "nativescript-dev-typescript": "^0.3.0",
-		"tns-core-modules": "^2.0.0"
+		"tns-core-modules": "^2.1.0"
   },
 	"devDependencies": {
 		"babel-traverse": "6.7.6",

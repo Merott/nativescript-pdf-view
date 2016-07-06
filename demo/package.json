@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "com.merott.NativeScriptPDFViewerDemo",
+    "id": "com.merott.NativeScriptPDFViewDemo",
     "tns-ios": {
       "version": "2.0.0"
     },
@@ -10,8 +10,8 @@
   },
   "private": true,
   "dependencies": {
-    "nativescript-pdf-viewer": "file:..",
-    "tns-core-modules": "^2.0.0"
+    "nativescript-pdf-view": "file:..",
+    "tns-core-modules": "^2.1.0"
   },
   "devDependencies": {
     "babel-traverse": "6.7.6",

@@ -1,5 +1,7 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page
+ xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded"
+ xmlns:pdfView="nativescript-pdf-view">
   <StackLayout>
-    <Label text="Hello PDF Viewer" class="message" textWrap="true"/>
+    <pdfView:PDFView src="http://www.pdf995.com/samples/pdf.pdf"/>
   </StackLayout>
 </Page>

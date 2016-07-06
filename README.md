@@ -16,7 +16,7 @@ Those `demo` tasks are just general helpers. You may want to have more granular 
 cd demo
 
 // when developing, to ensure the latest code is built into the demo, it's a gaurantee to remove the plugin and add it back
-tns plugin remove nativescript-pdf-viewer
+tns plugin remove nativescript-pdf-view
 tns plugin add ..
 
 # manual platform adds
