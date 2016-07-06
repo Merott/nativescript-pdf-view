@@ -1,45 +1,44 @@
 {
-	"name": "nativescript-yourplugin",
-	"version": "1.0.0",
-	"description": "Your awesome NativeScript plugin.",
-	"main": "yourplugin.js",
-	"nativescript": {
-		"platforms": {
-			"android": "2.0.0",
+  "name": "nativescript-pdf-viewer",
+  "version": "1.0.0",
+  "description": "A NativeScript plugin to display PDF files on iOS and Android",
+  "main": "src/plugin.js",
+  "nativescript": {
+    "platforms": {
+      "android": "2.0.0",
       "ios": "2.0.0"
-		}
-	},
-	"scripts": {
-		"build": "tsc",
+    }
+  },
+  "scripts": {
+    "build": "tsc",
     "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
-		"demo.android": "npm run preparedemo && cd demo && tns run android",
-		"preparedemo": "npm run build && cd demo && tns plugin remove nativescript-yourplugin && tns plugin add .. && tns install",
-		"setup": "cd demo && npm install && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/YourName/nativescript-yourplugin.git"
-	},
-	"keywords": [
-		"NativeScript",
-		"JavaScript",
-		"Android",
-		"iOS"
-	],
-	"author": {
-		"name": "Your Name",
-		"email": "youremail@yourdomain.com"
-	},
-	"bugs": {
-		"url": "https://github.com/YourName/nativescript-yourplugin/issues"
-	},
-	"license": {
-		"type": "MIT",
-		"url": "https://github.com/YourName/nativescript-yourplugin/blob/master/LICENSE"
-	},
-	"homepage": "https://github.com/YourName/nativescript-yourplugin",
-	"readmeFilename": "README.md",
-	"devDependencies": {
-		"typescript": "^1.8.10"
-	}
+    "demo.android": "npm run preparedemo && cd demo && tns run android",
+    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-pdf-viewer && tns plugin add .. && tns install",
+    "setup": "npm install && cd demo && npm install && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Merott/nativescript-pdf-viewer.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS",
+    "PDF",
+    "View"
+  ],
+  "author": {
+    "name": "Merott Movahedi",
+    "email": "merott@merott.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Merott/nativescript-pdf-viewer/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Merott/nativescript-pdf-viewer",
+  "devDependencies": {
+    "tslint": "3.13.0",
+    "typescript": "1.8.10"
+  }
 }
