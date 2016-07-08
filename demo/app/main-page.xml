@@ -1,8 +1,8 @@
 <Page
  xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded"
- xmlns:pdfView="nativescript-pdf-view">
+ xmlns:pdf="nativescript-pdf-view">
   <StackLayout>
     <Button text="Show Another!" tap="{{ changePDF }}" />
-    <pdfView:PDFView src="{{ pdfUrl }}"/>
+    <pdf:PDFView src="{{ pdfUrl }}"/>
   </StackLayout>
 </Page>
