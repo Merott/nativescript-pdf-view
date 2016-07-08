@@ -1,15 +1,31 @@
 import * as app from 'application';
-import * as dialogs from 'ui/dialogs';
-import * as view from 'ui/core/view';
 import * as dependencyObservable from 'ui/core/dependency-observable';
+import * as proxy from 'ui/core/proxy';
+import * as view from 'ui/core/view';
+import * as dialogs from 'ui/dialogs';
 
 export abstract class PDFView extends view.View {
-  public static srcProperty: dependencyObservable.Property;
+  private static srcProperty = new dependencyObservable.Property(
+    'src',
+    'PdfView',
+    new proxy.PropertyMetadata('')
+  );
 
-  constructor() {
-    super();
-    console.log('common constructor!!!!!!!!');
+  private static onSrcPropertyChanged(
+    data: dependencyObservable.PropertyChangeData
+  ) {
+    var pdfView = <PDFView>data.object;
+    pdfView.load(data.newValue);
   }
 
-  public src: string;
+  public get src(): string {
+    return this._getValue(PDFView.srcProperty);
+  }
+
+  public set src(value: string) {
+    this._setValue(PDFView.srcProperty, value);
+    this.load(value);
+  }
+
+  public abstract load(src: string);
 }
