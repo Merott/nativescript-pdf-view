@@ -1,5 +1,6 @@
-import * as common from './plugin.common';
 import * as ui from 'ui/core/view';
+
+import * as common from './plugin.common';
 
 export class PDFView extends common.PDFView {
   private _ios: UIWebView;

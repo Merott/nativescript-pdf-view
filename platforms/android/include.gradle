@@ -1,0 +1,11 @@
+android {
+  productFlavors {
+    "nativescript-pdf-view" {
+      dimension "nativescript-pdf-view"
+    }
+  }
+}
+
+dependencies {
+    compile 'com.github.barteksc:android-pdf-viewer:1.1.2'
+}

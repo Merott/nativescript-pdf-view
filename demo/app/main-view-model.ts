@@ -4,7 +4,9 @@ import {PDFView} from 'nativescript-pdf-view';
 export class HelloWorldModel extends Observable {
   public pdfUrls = [
     'http://www.pdf995.com/samples/pdf.pdf',
-    'http://www.pdf995.com/samples/widgets.pdf'
+    'http://www.pdf995.com/samples/widgets.pdf',
+    'http://www.pdfpdf.com/samples/pptdemo2.pdf',
+    'http://www.pdfpdf.com/samples/Sample4.PDF'
   ];
 
   constructor() {
@@ -14,7 +16,7 @@ export class HelloWorldModel extends Observable {
 
   public changePDF() {
     this.current++;
-    this.set('pdfUrl', this.pdfUrls[(this.current + 1) % 2]);
+    this.set('pdfUrl', this.pdfUrls[(this.current + 1) % this.pdfUrls.length]);
   }
 
   private current = 0;
