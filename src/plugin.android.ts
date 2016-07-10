@@ -6,8 +6,8 @@ import * as http from 'http';
 
 export class PDFView extends common.PDFView {
   private _android: pdfviewer.PDFView;
-  private tempFilePath = fs.path
-    .join(fs.knownFolders.temp().path, 'PDFViewer.temp1873621812.pdf');
+  private promise: Promise<any>;
+  private tempFolder = fs.knownFolders.temp().getFolder('PDFViewer.temp/');
 
   public get android() {
     return this._android;
@@ -18,20 +18,14 @@ export class PDFView extends common.PDFView {
   }
 
   public load(src: string) {
-    if (src.indexOf('://') >= 0 && src.indexOf('file://') !== 0) {
-      // AndroidPdfViewer cannot load from remote URLs, download to cache...
+    // reset any previous promise since we've called load again
+    this.promise = void 0;
 
-      http.getFile(src, this.tempFilePath).then(file => {
-        this.load(file.path);
-      }).catch(error => {
-        console.error(error);
-      });
-
-      return;
-    }
-
-    if (src.indexOf('file://') !== 0) {
+    if (src.indexOf('://') === -1) {
       src = 'file://' + src;
+    } else if (src.indexOf('file://') !== 0) {
+      // AndroidPdfViewer cannot load from remote URLs, download to cache
+      return this.cacheThenLoad(src);
     }
 
     const uri = android.net.Uri.parse(src);
@@ -43,6 +37,23 @@ export class PDFView extends common.PDFView {
       .swipeVertical(true)
       .showMinimap(false)
       .load();
+  }
+
+  private cacheThenLoad(url: string) {
+    // clear everything in cache
+    this.tempFolder.clear().then(() => {
+
+      // download to cache
+      const promise = this.promise = http
+        .getFile(url, `${this.tempFolder.path}/${java.util.UUID.randomUUID()}`)
+        .then(file => {
+          if (this.promise === promise) {  // make sure we haven't switched
+            this.load(file.path);
+          }
+        }).catch(error => {
+          console.error(error);
+        });
+    });
   }
 
   private _createUI() {
