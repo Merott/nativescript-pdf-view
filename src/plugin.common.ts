@@ -19,3 +19,12 @@ export abstract class PDFView extends view.View {
 
   public abstract load(src: string);
 }
+
+try {
+  const registerElement =
+    require('nativescript-angular/element-registry').registerElement;
+
+  registerElement('PDFView', () => require('./plugin').PDFView);
+} catch (e) {
+  // it's ok. nativescript-angular isn't installed.
+}
