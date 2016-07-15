@@ -5,8 +5,8 @@
   "main": "src/plugin.js",
   "nativescript": {
     "platforms": {
-      "android": "2.0.0",
-      "ios": "2.0.0"
+      "android": "2.2.0-next-2016-07-15-870",
+      "ios": "2.1.1"
     }
   },
   "scripts": {
@@ -38,7 +38,7 @@
   "license": "MIT",
   "homepage": "https://github.com/Merott/nativescript-pdf-view",
   "devDependencies": {
-    "tns-core-modules": "2.0.0",
+    "tns-core-modules": "2.2.0-2016-07-14-3692",
     "tns-platform-declarations": "2.0.0",
     "tslint": "3.13.0",
     "typescript": "1.8.10"
