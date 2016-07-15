@@ -12,6 +12,14 @@ options, and no error handling have been built yet. I welcome all Pull Requests!
 If you're using the plugin with Angular 2, the plugin automatically registers
 `PDFView` as a valid tag for Angular templates. Usage is simple:
 
-```html
-<PDFView [src]="'http://www.pdf995.com/samples/pdf.pdf'"></PDFView>
-```
+1. Make sure to import `nativescript-pdf-view` somewhere in your code, e.g:
+
+  ```ts
+  import 'nativescript-pdf-view';
+  ```
+
+2. Include the tag in your template:
+
+  ```html
+  <PDFView [src]="'http://www.pdf995.com/samples/pdf.pdf'"></PDFView>
+  ```
