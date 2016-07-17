@@ -14,6 +14,7 @@
     "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
     "demo.android": "npm run preparedemo && cd demo && tns run android",
     "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-pdf-view && tns plugin add .. && tns install",
+    "prepublish": "npm run build",
     "setup": "npm install && cd demo && npm install && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
   },
   "repository": {
