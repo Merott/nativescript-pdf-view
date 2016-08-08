@@ -20,7 +20,14 @@ export class PDFView extends common.PDFView {
   }
 
   public load(src: string) {
-    const url = NSURL.URLWithString(src);
+    let url: NSURL;
+
+    if (src.indexOf('://') === -1) {
+      url = NSURL.fileURLWithPath(src);
+    } else {
+      url = NSURL.URLWithString(src);
+    }
+
     const urlRequest = new NSURLRequest(url);
     this.ios.loadRequest(urlRequest);
   }
