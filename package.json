@@ -4,7 +4,7 @@
   "main": "src/plugin.js",
   "nativescript": {
     "platforms": {
-      "android": "2.2.0-next-2016-07-15-870",
+      "android": "2.2.0-next-2016-08-02-918",
       "ios": "2.1.1"
     }
   },
@@ -48,7 +48,7 @@
     "@semantic-release/condition-codeship": "1.1.0",
     "@semantic-release/release-notes-generator": "2.0.0",
     "semantic-release": "4.3.5",
-    "tns-core-modules": "2.2.0-2016-07-14-3692",
+    "tns-core-modules": "2.2.0-2016-08-07-3885",
     "tns-platform-declarations": "2.0.0",
     "tslint": "3.13.0",
     "typescript": "1.8.10"
