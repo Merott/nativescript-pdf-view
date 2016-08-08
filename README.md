@@ -29,3 +29,26 @@ If you're using the plugin with Angular 2, the plugin automatically registers
   ```html
   <PDFView [src]="'http://www.pdf995.com/samples/pdf.pdf'"></PDFView>
   ```
+
+# Try the Demo
+
+To try the demo, `cd` into the `demo` folder, and run the following commands:
+
+```sh
+npm install
+
+# iOS
+tns platform add ios
+tns run ios
+
+# Android
+tns platform add android@2.2.0-next-2016-08-02-918
+tns run android  # try again if you get error "more than one library ..."
+```
+
+## Why the dependency on `android@next` platform
+
+I've been getting all kinds of different issues trying to run this plugin with
+the latest released version of `tns-core-modules` and `tns-android` runtime, and
+the issues don't appear to exist in the current pre-release versions. Therefore
+for the time being I've set the dependencies to pre-release versions.

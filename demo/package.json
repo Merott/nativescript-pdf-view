@@ -5,13 +5,13 @@
       "version": "2.1.1"
     },
     "tns-android": {
-      "version": "2.2.0-next-2016-07-15-870"
+      "version": "2.2.0-next-2016-08-02-918"
     }
   },
   "private": true,
   "dependencies": {
-    "nativescript-pdf-view": "file:..",
-    "tns-core-modules": "2.2.0-2016-07-14-3692"
+    "nativescript-pdf-view": "1.0.1",
+    "tns-core-modules": "2.2.0-2016-08-07-3885"
   },
   "devDependencies": {
     "babel-traverse": "6.7.6",
