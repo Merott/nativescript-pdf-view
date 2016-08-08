@@ -20,6 +20,10 @@ export class PDFView extends common.PDFView {
   }
 
   public load(src: string) {
+    if (!src) {
+      return;
+    }
+
     let url: NSURL;
 
     if (src.indexOf('://') === -1) {

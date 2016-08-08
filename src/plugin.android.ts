@@ -18,6 +18,10 @@ export class PDFView extends common.PDFView {
   }
 
   public load(src: string) {
+    if (!src || !this.android) {
+      return;
+    }
+
     // reset any previous promise since we've called load again
     this.promise = void 0;
 
