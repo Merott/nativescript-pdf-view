@@ -21,6 +21,5 @@ declare class Configurator {
   pages(...pageNumbers: number[]): this;
   enableDoubletap(enable: boolean): this;
   enableSwipe(enable: boolean): this;
-  showMinimap(show: boolean): this;
-  swipeVertical(swipe: boolean): this;
+  swipeHorizontal(horizontal: boolean): this;
 }
