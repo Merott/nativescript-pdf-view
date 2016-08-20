@@ -2,7 +2,7 @@
   "nativescript": {
     "id": "com.merott.NativeScriptPDFViewDemo",
     "tns-ios": {
-      "version": "2.1.1"
+      "version": "2.2.1"
     },
     "tns-android": {
       "version": "2.2.0-next-2016-08-02-918"
@@ -11,15 +11,21 @@
   "private": true,
   "dependencies": {
     "nativescript-pdf-view": "1.0.1",
-    "tns-core-modules": "2.2.0-2016-08-07-3885"
+    "tns-core-modules": "2.2.1"
   },
   "devDependencies": {
-    "babel-traverse": "6.7.6",
-    "babel-types": "6.7.7",
-    "babylon": "6.7.0",
-    "filewalker": "0.1.2",
+    "babel-traverse": "6.13.0",
+    "babel-types": "6.13.0",
+    "babylon": "6.9.0",
+    "filewalker": "0.1.3",
     "lazy": "1.0.11",
     "nativescript-dev-typescript": "^0.3.2",
     "typescript": "^1.8.10"
+  },
+  "scripts": {
+    "reinstall:ios": "tns platform remove ios && tns platform add ios && tns plugin add ..",
+    "reinstall:android": "tns platform remove android && tns platform add android && tns plugin add ..",
+    "android": "tns run android",
+    "ios": "tns run ios"
   }
 }

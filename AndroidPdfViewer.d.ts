@@ -1,4 +1,4 @@
-/// <reference path="./node_modules/tns-platform-declarations/android17.d.ts" />
+/// <reference path="./node_modules/tns-platform-declarations/tns-core-modules/android17.d.ts" />
 
 declare module com.github.barteksc.pdfviewer {
   export class PDFView extends android.view.SurfaceView {
