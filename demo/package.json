@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "nativescript-pdf-view": "file:..",
+    "nativescript-pdf-view": "latest",
     "tns-core-modules": "2.2.1"
   },
   "devDependencies": {
