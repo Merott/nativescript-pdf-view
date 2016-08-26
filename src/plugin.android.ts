@@ -36,10 +36,6 @@ export class PDFView extends common.PDFView {
 
     this.android
       .fromUri(uri)
-      .enableSwipe(true)
-      .enableDoubletap(true)
-      .swipeVertical(true)
-      .showMinimap(false)
       .load();
   }
 

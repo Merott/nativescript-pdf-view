@@ -37,7 +37,7 @@ export class PDFView extends common.PDFView {
   }
 
   private init() {
-    this.ios = new UIWebView(CGRectInfinite);
+    this.ios = new UIWebView(UIScreen.mainScreen().bounds);
 
     this.ios.autoresizingMask =
       UIViewAutoresizing.UIViewAutoresizingFlexibleWidth |

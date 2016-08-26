@@ -4,12 +4,13 @@
   "main": "src/plugin.js",
   "nativescript": {
     "platforms": {
-      "android": "2.2.0-next-2016-08-02-918",
-      "ios": "2.1.1"
+      "android": "2.2.0",
+      "ios": "2.2.1"
     }
   },
   "scripts": {
     "build": "tsc",
+    "build:watch": "tsc --watch",
     "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
     "demo.android": "npm run preparedemo && cd demo && tns run android",
     "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-pdf-view && tns plugin add .. && tns install",
@@ -48,9 +49,9 @@
     "@semantic-release/condition-codeship": "1.1.0",
     "@semantic-release/release-notes-generator": "2.0.0",
     "semantic-release": "4.3.5",
-    "tns-core-modules": "2.2.0-2016-08-07-3885",
-    "tns-platform-declarations": "2.0.0",
-    "tslint": "3.13.0",
+    "tns-core-modules": "2.2.1",
+    "tns-platform-declarations": "2.2.0",
+    "tslint": "3.14.0",
     "typescript": "1.8.10"
   }
 }
