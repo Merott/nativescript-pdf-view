@@ -19,5 +19,9 @@ export class HelloWorldModel extends Observable {
     this.set('pdfUrl', this.pdfUrls[(this.current + 1) % this.pdfUrls.length]);
   }
 
+  public onLoad() {
+    alert('Loaded PDF!');
+  }
+
   private current = 0;
 }

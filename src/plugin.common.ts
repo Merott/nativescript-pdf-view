@@ -8,16 +8,26 @@ export abstract class PDFView extends view.View {
   private static srcProperty = new Property(
     'src', 'PdfView', new proxy.PropertyMetadata(''));
 
+  public static loadEvent = 'load';
+
+  public static notifyOfEvent(eventName: string, pdfViewRef: WeakRef<PDFView>) {
+    const viewer = pdfViewRef.get();
+
+    if (viewer) {
+      viewer.notify({ eventName, object: viewer });
+    }
+  }
+
   public get src(): string {
     return this._getValue(PDFView.srcProperty);
   }
 
   public set src(src: string) {
     this._setValue(PDFView.srcProperty, src);
-    this.load(src);
+    this.loadPDF(src);
   }
 
-  public abstract load(src: string);
+  public abstract loadPDF(src: string);
 }
 
 try {

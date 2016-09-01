@@ -10,6 +10,24 @@ declare module com.github.barteksc.pdfviewer {
     export interface OnErrorListener {
       onError(throwable: java.lang.Throwable): void;
     }
+
+    interface IOnLoadCompleteListener {
+      /**
+       * Called when the PDF is loaded
+       * @param numPages the number of pages in this PDF file
+       */
+      loadComplete(numPages: number): void;
+    }
+
+    export class OnLoadCompleteListener implements IOnLoadCompleteListener {
+      constructor(implementation: IOnLoadCompleteListener);
+
+      /**
+       * Called when the PDF is loaded
+       * @param numPages the number of pages in this PDF file
+       */
+      loadComplete(numPages: number): void;
+    }
   }
 }
 
@@ -21,5 +39,6 @@ declare class Configurator {
   pages(...pageNumbers: number[]): this;
   enableDoubletap(enable: boolean): this;
   enableSwipe(enable: boolean): this;
+  onLoad(onLoadCompleteListener: pdfviewer.listener.OnLoadCompleteListener): this;
   swipeHorizontal(horizontal: boolean): this;
 }

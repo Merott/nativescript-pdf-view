@@ -4,11 +4,12 @@ import * as common from './plugin.common';
 
 export class PDFView extends common.PDFView {
   private _ios: UIWebView;
+  private delegate: PDFViewDelegate;
 
   constructor() {
     super();
     this.init();
-    this.load(this.src);
+    this.loadPDF(this.src);
   }
 
   public get ios() {
@@ -19,7 +20,7 @@ export class PDFView extends common.PDFView {
     this._ios = value;
   }
 
-  public load(src: string) {
+  public loadPDF(src: string) {
     if (!src) {
       return;
     }
@@ -36,8 +37,19 @@ export class PDFView extends common.PDFView {
     this.ios.loadRequest(urlRequest);
   }
 
+  public onLoaded() {
+    super.onLoaded();
+    this._ios.delegate = this.delegate;
+  }
+
+  public onUnloaded() {
+    this._ios.delegate = null;
+    super.onUnloaded();
+  }
+
   private init() {
     this.ios = new UIWebView(UIScreen.mainScreen().bounds);
+    this.delegate = PDFViewDelegate.initWithOwner(new WeakRef(this));
 
     this.ios.autoresizingMask =
       UIViewAutoresizing.UIViewAutoresizingFlexibleWidth |
@@ -45,4 +57,20 @@ export class PDFView extends common.PDFView {
 
     this.ios.scalesPageToFit = true;
   }
+}
+
+class PDFViewDelegate extends NSObject implements UIWebViewDelegate {
+  public static ObjCProtocols = [UIWebViewDelegate];
+
+  public static initWithOwner(owner: WeakRef<PDFView>): PDFViewDelegate {
+    let delegate = <PDFViewDelegate>PDFViewDelegate.new();
+    delegate.owner = owner;
+    return delegate;
+  }
+
+  public webViewDidFinishLoad(webView: UIWebView) {
+    return common.PDFView.notifyOfEvent(common.PDFView.loadEvent, this.owner);
+  }
+
+  private owner: WeakRef<PDFView>;
 }
