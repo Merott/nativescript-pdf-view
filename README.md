@@ -2,7 +2,7 @@
 
 This is a very basic PDF view implementation that does only one thing, and
 that is to display PDF files. It conveniently uses the iOS `UIWebView`, but
-for Android it uses AndroidPdfView.
+for Android it uses [AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer).
 
 This plugin does the bare minimum required to render the PDF, no configuration
 options, and no error handling have been built yet. I welcome all Pull Requests!
@@ -11,7 +11,7 @@ options, and no error handling have been built yet. I welcome all Pull Requests!
 
 ##
 
-Check out the demo folder for a sample usage.
+Check out the [demo](./demo) folder for a sample usage.
 
 ## Angular 2
 
@@ -27,7 +27,7 @@ If you're using the plugin with Angular 2, the plugin automatically registers
 2. Include the tag in your template:
 
   ```html
-  <PDFView [src]="'http://www.pdf995.com/samples/pdf.pdf'"></PDFView>
+  <PDFView [src]="src" (load)="onLoad()"></PDFView>
   ```
 
 # Try the Demo

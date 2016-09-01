@@ -9,6 +9,16 @@ export class PDFView extends common.PDFView {
   private promise: Promise<any>;
   private tempFolder = fs.knownFolders.temp().getFolder('PDFViewer.temp/');
 
+  private onLoadHandler = (() => {
+    const pdfViewRef = new WeakRef(this);
+
+    return new pdfviewer.listener.OnLoadCompleteListener({
+      loadComplete: (numPages) => {
+        common.PDFView.notifyOfEvent(common.PDFView.loadEvent, pdfViewRef);
+      }
+    });
+  })();
+
   public get android() {
     return this._android;
   }
@@ -17,12 +27,12 @@ export class PDFView extends common.PDFView {
     this._android = value;
   }
 
-  public load(src: string) {
+  public loadPDF(src: string) {
     if (!src || !this.android) {
       return;
     }
 
-    // reset any previous promise since we've called load again
+    // reset any previous promise since we've called loadPDF again
     this.promise = void 0;
 
     if (src.indexOf('://') === -1) {
@@ -36,6 +46,7 @@ export class PDFView extends common.PDFView {
 
     this.android
       .fromUri(uri)
+      .onLoad(this.onLoadHandler)
       .load();
   }
 
@@ -48,7 +59,7 @@ export class PDFView extends common.PDFView {
         .getFile(url, `${this.tempFolder.path}/${java.util.UUID.randomUUID()}`)
         .then(file => {
           if (this.promise === promise) {  // make sure we haven't switched
-            this.load(file.path);
+            this.loadPDF(file.path);
           }
         }).catch(error => {
           console.error(error);
@@ -58,6 +69,6 @@ export class PDFView extends common.PDFView {
 
   private _createUI() {
     this._android = new pdfviewer.PDFView(this._context, void 0);
-    this.load(this.src);
+    this.loadPDF(this.src);
   }
 }

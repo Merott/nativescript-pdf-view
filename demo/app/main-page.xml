@@ -3,6 +3,6 @@
  xmlns:pdf="nativescript-pdf-view">
   <StackLayout>
     <Button text="Show Another!" tap="{{ changePDF }}" />
-    <pdf:PDFView src="{{ pdfUrl }}"/>
+    <pdf:PDFView src="{{ pdfUrl }}" load="{{ onLoad }}"/>
   </StackLayout>
 </Page>
