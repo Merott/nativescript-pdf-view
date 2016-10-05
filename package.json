@@ -2,7 +2,6 @@
   "name": "nativescript-pdf-view",
   "description": "A NativeScript plugin to display PDF files on iOS and Android",
   "main": "src/plugin.js",
-  "version": "1.2.1",
   "nativescript": {
     "platforms": {
       "android": "2.2.0",
