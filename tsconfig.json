@@ -4,7 +4,8 @@
     "module": "commonjs",
     "removeComments": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "noEmitHelpers": true
   },
   "files": [
     "./node_modules/tns-platform-declarations/tns-core-modules/android17.d.ts",
