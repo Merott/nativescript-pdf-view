@@ -1,0 +1,21 @@
+<StackLayout>
+    <ActionBar title="PDF Viewer">
+
+
+    </ActionBar>
+
+    <GridLayout
+            rows="*"
+            columns="*">
+        <ActivityIndicator
+                row="0"
+                col="0"
+                [busy]="isLoading"
+                verticalAlignment="center"
+                horizontalAlignment="center">
+        </ActivityIndicator>
+        <PdfViewer [src]="invoiceLocalPath"
+                   row="0"
+                   col="0"></PdfViewer>
+    </GridLayout>
+</StackLayout>
