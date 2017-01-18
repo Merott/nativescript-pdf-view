@@ -2,18 +2,33 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
+        "declaration": true,
         "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "lib": [
+            "dom"
+        ],
         "sourceMap": true,
-        "noEmitOnError": false,
+        "pretty": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
         "noEmitHelpers": true,
-        "noImplicitUseStrict": true
+        "noEmitOnError": false,
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noImplicitUseStrict": false,
+        "noFallthroughCasesInSwitch": true,
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules"
+        ],
+        "types": []
     },
-    "files": [
-        "node_modules/tns-core-modules/tns-core-modules.d.ts",
-        "pdfviewer.common.ts",
-        "pdfviewer.android.ts",
-        "pdfviewer.ios.ts"
+    "exclude": [
+        "demo",
+        "node_modules"
     ],
     "compileOnSave": false
 }
