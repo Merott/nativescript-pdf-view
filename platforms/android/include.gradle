@@ -1,7 +1,7 @@
 android {
   productFlavors {
-    "nativescript-pdf-view" {
-      dimension "nativescript-pdf-view"
+    "nativescript-pdf-viewer" {
+      dimension "nativescript-pdf-viewer"
     }
   }
 }
