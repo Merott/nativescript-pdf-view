@@ -1,4 +1,4 @@
-# nativescript-pdf-view
+# nativescript-pdf-viewer
 
 This is a very basic PDF view implementation that does only one thing, and
 that is to display PDF files. It conveniently uses the iOS `UIWebView`, but
