@@ -1,4 +1,4 @@
-import * as common from './pdfviewer.common';
+import * as common from './pdfview.common';
 
 declare var UIWebView: any;
 declare var UIScreen: any;
@@ -7,7 +7,7 @@ declare var NSURLRequest: any;
 declare var UIViewAutoresizing: any;
 declare var UIScrollViewDecelerationRateNormal: any;
 
-export class PdfViewer extends common.PdfViewer {
+export class PdfView extends common.PdfView {
 
 	private _ios: any; /// UIWebView
 
