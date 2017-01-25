@@ -1,4 +1,4 @@
-# nativescript-pdf-view
+# nativescript-pdf-viewer
 
 This is a very basic PDF view implementation that does only one thing, and
 that is to display PDF files. It conveniently uses the iOS `UIWebView`, but
@@ -9,39 +9,33 @@ options, and no error handling have been built yet. I welcome all Pull Requests!
 
 # Usage
 
-##
+## Demo
 
 Check out the [demo](./demo) folder for a sample usage.
 
 ## Angular 2
 
 If you're using the plugin with Angular 2, the plugin automatically registers
-`PDFView` as a valid tag for Angular templates. Usage is simple:
+`PDFViewer` as a valid tag for Angular templates. Usage is simple:
 
-1. Make sure to import `nativescript-pdf-view` somewhere in your code, e.g:
+1. Make sure to import `nativescript-pdf-viewer` somewhere in your code, e.g:
 
   ```ts
-  import 'nativescript-pdf-view';
+  import 'nativescript-pdf-viewer';
   ```
 
 2. Include the tag in your template:
 
   ```html
-  <PDFView [src]="src" (load)="onLoad()"></PDFView>
+  <PDFViewer [src]="localPath"></PDFViewer>
   ```
 
 # Try the Demo
 
-To try the demo, `cd` into the `demo` folder, and run the following commands:
+To try the demo run the following commands:
 
 ```sh
-npm install
-
-# iOS
-tns platform add ios
-tns run ios
-
-# Android
-tns platform add android
-tns run android
+npm run setup
+npm run demo.ios
+npm run demo.android
 ```

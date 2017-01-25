@@ -3,7 +3,9 @@
 *.log
 /demo/app/*.js
 /demo/*.d.ts
+/demo/.idea/*
 /demo/lib
 /demo/platforms
 /demo/node_modules
 /node_modules
+.vscode
