@@ -16,7 +16,7 @@ Check out the [demo](./demo) folder for a sample usage.
 ## Angular 2
 
 If you're using the plugin with Angular 2, the plugin automatically registers
-`PDFView` as a valid tag for Angular templates. Usage is simple:
+`PDFViewer` as a valid tag for Angular templates. Usage is simple:
 
 1. Make sure to import `nativescript-pdf-viewer` somewhere in your code, e.g:
 
@@ -27,7 +27,7 @@ If you're using the plugin with Angular 2, the plugin automatically registers
 2. Include the tag in your template:
 
   ```html
-  <PDFView [src]="localPath"></PDFView>
+  <PDFViewer [src]="localPath"></PDFViewer>
   ```
 
 # Try the Demo

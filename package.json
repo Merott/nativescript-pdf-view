@@ -1,8 +1,8 @@
 {
   "name": "nativescript-pdf-viewer",
   "version": "2.0.1",
-  "description": "",
-  "main": "pdfview",
+  "description": "A NativeScript plugin to display PDF files on iOS and Android, with support for Xcode 8",
+  "main": "pdfviewer",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
@@ -29,10 +29,11 @@
     "Android",
     "iOS",
     "PDF",
-    "View"
+    "View",
+		"pdfviewer"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Essent",
+  "license": "MIT",
   "devDependencies": {
     "prompt": "^1.0.0",
     "rimraf": "^2.5.0",

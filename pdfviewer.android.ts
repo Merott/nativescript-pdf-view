@@ -1,8 +1,8 @@
 /// <reference path="AndroidPdfViewer.d.ts" />
-import * as common from './pdfview.common';
+import * as common from './pdfviewer.common';
 import pdfviewer = com.github.barteksc.pdfviewer;
 
-export class PdfView extends common.PdfView {
+export class PDFViewer extends common.PDFViewer {
 	private _android: pdfviewer.PDFView;
 
 	public constructor() {
