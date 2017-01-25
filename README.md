@@ -9,7 +9,7 @@ options, and no error handling have been built yet. I welcome all Pull Requests!
 
 # Usage
 
-##
+## Demo
 
 Check out the [demo](./demo) folder for a sample usage.
 
@@ -32,7 +32,7 @@ If you're using the plugin with Angular 2, the plugin automatically registers
 
 # Try the Demo
 
-To try the demo, `cd` into the `demo` folder, and run the following commands:
+To try the demo run the following commands:
 
 ```sh
 npm run setup
