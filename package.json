@@ -1,6 +1,6 @@
 {
   "name": "nativescript-pdf-viewer",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A NativeScript plugin to display PDF files on iOS and Android, with support for Xcode 8",
   "main": "pdfviewer",
   "typings": "index.d.ts",
