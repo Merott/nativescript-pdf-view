@@ -33,7 +33,7 @@ export class PDFView extends common.PDFView {
       url = NSURL.URLWithString(src);
     }
 
-    const urlRequest = new NSURLRequest(url);
+    const urlRequest = new NSURLRequest({ URL: url});
     this.ios.loadRequest(urlRequest);
   }
 
@@ -52,8 +52,8 @@ export class PDFView extends common.PDFView {
     this.delegate = PDFViewDelegate.initWithOwner(new WeakRef(this));
 
     this.ios.autoresizingMask =
-      UIViewAutoresizing.UIViewAutoresizingFlexibleWidth |
-      UIViewAutoresizing.UIViewAutoresizingFlexibleHeight;
+      UIViewAutoresizing.FlexibleWidth |
+      UIViewAutoresizing.FlexibleHeight;
 
     this.ios.scalesPageToFit = true;
   }
