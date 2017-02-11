@@ -3,13 +3,12 @@ import {PDFView} from 'nativescript-pdf-view';
 
 export class HelloWorldModel extends Observable {
   public pdfUrls = [
-    'http://www.pdf995.com/samples/pdf.pdf',
-    'http://www.pdf995.com/samples/widgets.pdf',
-    'http://www.pdfpdf.com/samples/pptdemo2.pdf',
-    'http://www.pdfpdf.com/samples/Sample4.PDF'
+    'https://www.princexml.com/samples/flyer/flyer.pdf',
+    'https://www.princexml.com/howcome/2016/samples/magic8/index.pdf',
+    'https://www.princexml.com/samples/invoice/invoicesample.pdf',
   ];
 
-  constructor() {
+  public constructor() {
     super();
     this.changePDF();
   }
