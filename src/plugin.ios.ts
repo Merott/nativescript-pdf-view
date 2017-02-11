@@ -48,7 +48,7 @@ export class PDFView extends common.PDFView {
   }
 
   private init() {
-    this.ios = new UIWebView(UIScreen.mainScreen().bounds);
+    this.ios = new UIWebView(this.mainScreen.bounds);
     this.delegate = PDFViewDelegate.initWithOwner(new WeakRef(this));
 
     this.ios.autoresizingMask =
@@ -56,6 +56,12 @@ export class PDFView extends common.PDFView {
       UIViewAutoresizing.UIViewAutoresizingFlexibleHeight;
 
     this.ios.scalesPageToFit = true;
+  }
+
+  private get mainScreen() {
+    return typeof UIScreen.mainScreen === 'function' ?
+      UIScreen.mainScreen() :  // xCode 7 and below
+      UIScreen.mainScreen;     // xCode 8+
   }
 }
 
