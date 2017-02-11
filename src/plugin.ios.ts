@@ -6,7 +6,7 @@ export class PDFView extends common.PDFView {
   private _ios: UIWebView;
   private delegate: PDFViewDelegate;
 
-  constructor() {
+  public constructor() {
     super();
     this.init();
     this.loadPDF(this.src);

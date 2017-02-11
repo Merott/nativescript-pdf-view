@@ -1,12 +1,12 @@
 /// <reference path="../AndroidPdfViewer.d.ts" />
 import pdfviewer = com.github.barteksc.pdfviewer;
-import * as common from './plugin.common';
 import * as fs from 'file-system';
 import * as http from 'http';
+import * as common from './plugin.common';
 
 export class PDFView extends common.PDFView {
   private _android: pdfviewer.PDFView;
-  private promise: Promise<any>;
+  private promise: Promise<void>;
   private tempFolder = fs.knownFolders.temp().getFolder('PDFViewer.temp/');
 
   private onLoadHandler = (() => {
@@ -15,7 +15,7 @@ export class PDFView extends common.PDFView {
     return new pdfviewer.listener.OnLoadCompleteListener({
       loadComplete: (numPages) => {
         common.PDFView.notifyOfEvent(common.PDFView.loadEvent, pdfViewRef);
-      }
+      },
     });
   })();
 
