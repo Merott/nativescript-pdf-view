@@ -1,8 +1,8 @@
 <Page
  xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded"
  xmlns:pdf="nativescript-pdf-view">
-  <StackLayout>
-    <Button text="Show Another!" tap="{{ changePDF }}" />
-    <pdf:PDFView src="{{ pdfUrl }}" load="{{ onLoad }}"/>
-  </StackLayout>
+  <FlexboxLayout flexDirection="column">
+    <Button height="70" text="Show Another!" tap="{{ changePDF }}" />
+    <pdf:PDFView flexGrow="1" src="{{ pdfUrl }}" load="{{ onLoad }}" />
+  </FlexboxLayout>
 </Page>

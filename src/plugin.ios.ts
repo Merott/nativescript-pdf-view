@@ -6,7 +6,7 @@ export class PDFView extends common.PDFView {
   private _ios: UIWebView;
   private delegate: PDFViewDelegate;
 
-  constructor() {
+  public constructor() {
     super();
     this.init();
     this.loadPDF(this.src);
@@ -33,7 +33,7 @@ export class PDFView extends common.PDFView {
       url = NSURL.URLWithString(src);
     }
 
-    const urlRequest = new NSURLRequest(url);
+    const urlRequest = new NSURLRequest({ URL: url});
     this.ios.loadRequest(urlRequest);
   }
 
@@ -48,14 +48,20 @@ export class PDFView extends common.PDFView {
   }
 
   private init() {
-    this.ios = new UIWebView(UIScreen.mainScreen().bounds);
+    this.ios = new UIWebView(this.mainScreen.bounds);
     this.delegate = PDFViewDelegate.initWithOwner(new WeakRef(this));
 
     this.ios.autoresizingMask =
-      UIViewAutoresizing.UIViewAutoresizingFlexibleWidth |
-      UIViewAutoresizing.UIViewAutoresizingFlexibleHeight;
+      UIViewAutoresizing.FlexibleWidth |
+      UIViewAutoresizing.FlexibleHeight;
 
     this.ios.scalesPageToFit = true;
+  }
+
+  private get mainScreen() {
+    return typeof UIScreen.mainScreen === 'function' ?
+      UIScreen.mainScreen() :  // xCode 7 and below
+      UIScreen.mainScreen;     // xCode 8+
   }
 }
 

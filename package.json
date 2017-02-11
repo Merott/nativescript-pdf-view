@@ -2,12 +2,7 @@
   "name": "nativescript-pdf-view",
   "description": "A NativeScript plugin to display PDF files on iOS and Android",
   "main": "src/plugin.js",
-  "nativescript": {
-    "platforms": {
-      "android": "2.2.0",
-      "ios": "2.2.1"
-    }
-  },
+  "nativescript": {},
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -48,10 +43,10 @@
   "devDependencies": {
     "@semantic-release/condition-codeship": "1.1.0",
     "@semantic-release/release-notes-generator": "2.0.0",
-    "semantic-release": "4.3.5",
-    "tns-core-modules": "2.2.1",
-    "tns-platform-declarations": "2.2.0",
-    "tslint": "3.14.0",
-    "typescript": "1.8.10"
+    "semantic-release": "6.3.2",
+    "tns-core-modules": "2.5.0",
+    "tns-platform-declarations": "2.5.0",
+    "tslint": "4.4.2",
+    "typescript": "2.1.6"
   }
 }

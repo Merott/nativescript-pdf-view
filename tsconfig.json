@@ -4,12 +4,15 @@
     "module": "commonjs",
     "removeComments": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "lib": [
+      "es2016"
+    ]
   },
   "files": [
-    "./node_modules/tns-platform-declarations/tns-core-modules/android17.d.ts",
-    "./node_modules/tns-platform-declarations/tns-core-modules/ios.d.ts",
-    "./node_modules/tns-core-modules/tns-core-modules.d.ts",
+    "./node_modules/tns-platform-declarations/android.d.ts",
+    "./node_modules/tns-platform-declarations/ios.d.ts",
+    "./node_modules/tns-core-modules/tns-core-modules.es2016.d.ts",
     "src/plugin.common.ts",
     "src/plugin.android.ts",
     "src/plugin.ios.ts"
