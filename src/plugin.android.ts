@@ -56,7 +56,7 @@ export class PDFView extends common.PDFView {
 
       // download to cache
       const promise = this.promise = http
-        .getFile(url, `${this.tempFolder.path}/${java.util.UUID.randomUUID()}`)
+        .getFile(url, `${this.tempFolder.path}/${Date.now()}.pdf`)
         .then(file => {
           if (this.promise === promise) {  // make sure we haven't switched
             this.loadPDF(file.path);
