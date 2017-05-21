@@ -39,6 +39,8 @@ declare class Configurator {
   pages(...pageNumbers: number[]): this;
   enableDoubletap(enable: boolean): this;
   enableSwipe(enable: boolean): this;
-  onLoad(onLoadCompleteListener: pdfviewer.listener.OnLoadCompleteListener): this;
+  onLoad(
+    onLoadCompleteListener: pdfviewer.listener.OnLoadCompleteListener
+  ): this;
   swipeHorizontal(horizontal: boolean): this;
 }

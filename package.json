@@ -1,17 +1,28 @@
 {
   "name": "nativescript-pdf-view",
+  "version": "0.0.0-development",
   "description": "A NativeScript plugin to display PDF files on iOS and Android",
-  "main": "src/plugin.js",
-  "nativescript": {},
+  "main": "pdf-view",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "3.0.0",
+      "ios": "3.0.0"
+    }
+  },
   "scripts": {
     "build": "tsc",
-    "build:watch": "tsc --watch",
-    "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
-    "demo.android": "npm run preparedemo && cd demo && tns run android",
+    "demo.ios": "npm run preparedemo && cd demo && tns run ios --emulator",
+    "demo.ios.device": "npm run preparedemo && cd demo && tns run ios",
+    "demo.android": "npm run preparedemo && cd demo && tns run android --emulator",
+    "lint": "tslint --project tsconfig.json --type-check -t stylish",
+    "test.ios": "cd demo && tns test ios --emulator",
+    "test.ios.device": "cd demo && tns test ios",
+    "test.android": "cd demo && tns test android",
     "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-pdf-view && tns plugin add .. && tns install",
     "prepublish": "npm run build",
-    "semantic-release": "./node_modules/.bin/semantic-release pre && npm publish && ./node_modules/.bin/semantic-release post",
-    "setup": "npm install && cd demo && npm install && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "setup": "yarn && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
   },
   "release": {
     "generateNotes": "./node_modules/@semantic-release/release-notes-generator",
@@ -24,12 +35,12 @@
     "url": "https://github.com/Merott/nativescript-pdf-view.git"
   },
   "keywords": [
-    "NativeScript",
-    "JavaScript",
     "Android",
-    "iOS",
+    "JavaScript",
+    "NativeScript",
     "PDF",
-    "View"
+    "View",
+    "iOS"
   ],
   "author": {
     "name": "Merott Movahedi",
@@ -40,13 +51,17 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/Merott/nativescript-pdf-view",
+  "readmeFilename": "README.md",
   "devDependencies": {
-    "@semantic-release/condition-codeship": "1.1.0",
-    "@semantic-release/release-notes-generator": "2.0.0",
-    "semantic-release": "6.3.2",
-    "tns-core-modules": "2.5.0",
-    "tns-platform-declarations": "2.5.0",
-    "tslint": "4.4.2",
-    "typescript": "2.1.6"
+    "@semantic-release/condition-codeship": "^1.1.0",
+    "@semantic-release/release-notes-generator": "^2.0.0",
+    "prompt": "~1.0.0",
+    "rimraf": "~2.6.1",
+    "semantic-release": "^6.3.6",
+    "tns-core-modules": "~3.0.0",
+    "tns-platform-declarations": "^3.0.1",
+    "tslint": "^5.2.0",
+    "tslint-stylish": "^2.1.0",
+    "typescript": "~2.3.2"
   }
 }

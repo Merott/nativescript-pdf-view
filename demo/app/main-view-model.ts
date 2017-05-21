@@ -1,7 +1,7 @@
-import {Observable} from 'data/observable';
-import {PDFView} from 'nativescript-pdf-view';
+import { Observable } from 'data/observable';
+import { PDFView } from 'nativescript-pdf-view';
 
-export class HelloWorldModel extends Observable {
+export class MainViewModel extends Observable {
   public pdfUrls = [
     'https://www.princexml.com/samples/flyer/flyer.pdf',
     'https://www.princexml.com/howcome/2016/samples/magic8/index.pdf',
