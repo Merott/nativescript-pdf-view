@@ -1,6 +1,9 @@
-// Add your native dependencies here:
-
-// Uncomment to add recyclerview-v7 dependency
-//dependencies {
-//	compile 'com.android.support:recyclerview-v7:+'
-//}
+android {
+  defaultConfig {
+    generatedDensities = []
+    applicationId = "com.merott.nativescriptpdfviewdemo"
+  }
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+}

@@ -1,47 +1,42 @@
-# nativescript-pdf-view
+# NativeScript PDFView
 
-This is a very basic PDF view implementation that does only one thing, and
-that is to display PDF files. It conveniently uses the iOS `UIWebView`, but
-for Android it uses [AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer).
+A minimal PDF view implementation that does only one thing, and that is to display PDF files in the simplest way possible. It conveniently uses the iOS `WKWebView`, and for Android it uses [`AndroidPdfViewer`](https://github.com/barteksc/AndroidPdfViewer).
 
-This plugin does the bare minimum required to render the PDF, no configuration
-options, and no error handling have been built yet. I welcome all Pull Requests!
+This plugin does the bare minimum required to render the PDF, no configuration options, and no error handling have been built yet. I welcome all Pull Requests!
 
-# Usage
+My aim is to keep the features consistent across iOS and Android.
 
-##
+## Installation
 
-Check out the [demo](./demo) folder for a sample usage.
-
-## Angular 2
-
-If you're using the plugin with Angular 2, the plugin automatically registers
-`PDFView` as a valid tag for Angular templates. Usage is simple:
-
-1. Make sure to import `nativescript-pdf-view` somewhere in your code, e.g:
-
-  ```ts
-  import 'nativescript-pdf-view';
-  ```
-
-2. Include the tag in your template:
-
-  ```html
-  <PDFView [src]="src" (load)="onLoad()"></PDFView>
-  ```
-
-# Try the Demo
-
-To try the demo, `cd` into the `demo` folder, and run the following commands:
-
-```sh
-npm install
-
-# iOS
-tns platform add ios
-tns run ios
-
-# Android
-tns platform add android
-tns run android
 ```
+tns plugin add nativescript-pdf-view
+```
+
+## Usage
+
+### Vanilla NativeScript
+
+```xml
+<Page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:pdf="nativescript-pdf-view"
+  loaded="pageLoaded">
+  <pdf:PDFView src="{{ pdfUrl }}" load="{{ onLoad }}" />
+</Page>
+```
+
+### Angular NativeScript
+
+```ts
+import { PDFView } from 'nativescript-pdf-view';
+import { registerElement } from 'nativescript-angular';
+registerElement('PDFView', () => PDFView);
+```
+
+```html
+<PDFView [src]="src" (load)="onLoad()"></PDFView>
+```
+
+## Demo
+
+Check out the [demo](./demo) folder for a demo application using this plugin. You can run the demo by executing `npm run demo.ios` and `npm run demo.android` from the root directory of the project.

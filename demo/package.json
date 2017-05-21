@@ -1,31 +1,39 @@
 {
+  "name": "nativescript-pdf-view-demo",
+  "description": "Demo application for nativescript-pdf-view",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Merott/nativescript-pdf-view.git"
+  },
   "nativescript": {
-    "id": "com.merott.NativeScriptPDFViewDemo",
+    "id": "com.merott.nativescriptpdfviewdemo",
     "tns-ios": {
-      "version": "2.3.0"
+      "version": "3.0.0"
     },
     "tns-android": {
-      "version": "2.3.0"
+      "version": "3.0.0"
     }
   },
-  "private": true,
   "dependencies": {
-    "nativescript-pdf-view": "latest",
-    "tns-core-modules": "2.5.0"
+    "nativescript-pdf-view": "file:..",
+    "nativescript-theme-core": "~1.0.2",
+    "nativescript-unit-test-runner": "^0.3.4",
+    "tns-core-modules": "3.0.0"
   },
   "devDependencies": {
-    "babel-traverse": "6.22.1",
-    "babel-types": "6.22.0",
-    "babylon": "6.15.0",
+    "babel-traverse": "6.24.1",
+    "babel-types": "6.24.1",
+    "babylon": "6.17.1",
     "filewalker": "0.1.3",
+    "jasmine-core": "^2.6.1",
+    "karma": "^1.7.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-nativescript-launcher": "^0.4.0",
     "lazy": "1.0.11",
-    "nativescript-dev-typescript": "0.3.7",
-    "typescript": "^2.1.6"
-  },
-  "scripts": {
-    "reinstall:ios": "tns platform remove ios && tns platform add ios && tns plugin add ..",
-    "reinstall:android": "tns platform remove android && tns platform add android && tns plugin add ..",
-    "android": "tns run android",
-    "ios": "tns run ios"
+    "nativescript-dev-android-snapshot": "^0.*.*",
+    "nativescript-dev-typescript": "~0.4.4",
+    "typescript": "~2.3.2"
   }
 }
