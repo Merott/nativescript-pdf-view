@@ -30,7 +30,7 @@ export class PDFView extends PDFViewCommon {
 
   public createNativeView() {
     // tslint:disable-next-line:no-unsafe-any
-    return new pdfviewer.PDFView(this._context);
+    return new pdfviewer.PDFView(this._context, null);
   }
 
   public [srcProperty.setNative](value: string) {
