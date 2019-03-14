@@ -1,3 +1,5 @@
+[![Codeship Status for Merott/nativescript-pdf-view](https://app.codeship.com/projects/a28f27e0-3fc5-0134-4e4b-5e760449ae25/status?branch=master)](https://app.codeship.com/projects/167540)
+
 # NativeScript PDFView
 
 A minimal PDF view implementation that does only one thing, and that is to display PDF files in the simplest way possible. It conveniently uses the iOS `WKWebView`, and for Android it uses [`AndroidPdfViewer`](https://github.com/barteksc/AndroidPdfViewer).
