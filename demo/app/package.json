@@ -1,6 +1,8 @@
 {
+  "main": "app.js",
   "android": {
-    "v8Flags": "--expose_gc"
+    "v8Flags": "--expose_gc",
+    "markingMode": "none"
   },
   "main": "app.js",
   "name": "nativescript-pdf-view-demo",
