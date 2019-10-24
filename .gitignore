@@ -11,5 +11,5 @@ demo/*.d.ts
 demo/lib
 demo/platforms
 demo/node_modules
+demo/.migration_backup
 node_modules
-.migration_backup
