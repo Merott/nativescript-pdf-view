@@ -274,7 +274,6 @@
         "variable-declaration": "onespace"
       }
     ],
-    "typeof-compare": true,
     "unified-signatures": true,
     "use-isnan": true,
     "variable-name": [
