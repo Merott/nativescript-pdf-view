@@ -10,17 +10,17 @@
   "nativescript": {
     "id": "com.merott.nativescriptpdfviewdemo",
     "tns-ios": {
-      "version": "3.0.0"
+      "version": "6.0.1"
     },
     "tns-android": {
-      "version": "3.0.0"
+      "version": "6.0.0"
     }
   },
   "dependencies": {
     "nativescript-pdf-view": "file:..",
     "nativescript-theme-core": "~1.0.2",
-    "nativescript-unit-test-runner": "^0.3.4",
-    "tns-core-modules": "3.0.0"
+    "nativescript-unit-test-runner": "0.7.0",
+    "tns-core-modules": "6.0.1"
   },
   "devDependencies": {
     "babel-traverse": "6.24.1",
@@ -28,12 +28,13 @@
     "babylon": "6.17.1",
     "filewalker": "0.1.3",
     "jasmine-core": "^2.6.1",
-    "karma": "^1.7.0",
-    "karma-jasmine": "^1.1.0",
+    "karma": "4.1.0",
+    "karma-jasmine": "2.0.1",
     "karma-nativescript-launcher": "^0.4.0",
     "lazy": "1.0.11",
     "nativescript-dev-android-snapshot": "^0.*.*",
-    "nativescript-dev-typescript": "~0.4.4",
-    "typescript": "~2.3.2"
+    "typescript": "~3.5.3",
+    "nativescript-dev-webpack": "~1.1.0",
+    "karma-webpack": "3.0.5"
   }
 }
