@@ -55,9 +55,12 @@ export class PDFView extends PDFViewCommon {
 
     const uri = android.net.Uri.parse(src);
 
+    const defaultSpacingDP = 8;
     this.android
       .fromUri(uri)
       .onLoad(this.onLoadHandler)
+      .spacing(defaultSpacingDP)
+      .fitEachPage(true)
       .load();
   }
 
