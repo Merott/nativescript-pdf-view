@@ -1,4 +1,6 @@
-[![Codeship Status for madmas/nativescript-pdf-view](https://app.codeship.com/projects/0f931ef0-d7b9-0137-7d12-4e042b4842b4/status?branch=master)](https://app.codeship.com/projects/370858)
+[![Build Status](https://travis-ci.org/madmas/nativescript-pdf-view.svg?branch=master)](https://travis-ci.org/madmas/nativescript-pdf-view)
+
+[![npm version](https://badge.fury.io/js/nativescript-pdf-view.svg)](https://badge.fury.io/js/nativescript-pdf-view)
 
 # NativeScript PDFView
 
