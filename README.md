@@ -4,7 +4,7 @@
 
 # NativeScript PDFView
 
-> *Remark* This repository is a forks of [the original by Merott](https://github.com/Merott/nativescript-pdf-view) that will be used with his consent to provide further maintenance of this NativeScript plugin.
+> *Remark* [This repository](https://github.com/madmas/nativescript-pdf-view) is a fork of [the original by Merott](https://github.com/Merott/nativescript-pdf-view) that will be used with his consent to provide further maintenance of this NativeScript plugin.
 
 A minimal PDF view implementation that does only one thing, and that is to display PDF files in the simplest way possible. It conveniently uses the iOS `WKWebView`, and for Android it uses [`AndroidPdfViewer`](https://github.com/barteksc/AndroidPdfViewer).
 
