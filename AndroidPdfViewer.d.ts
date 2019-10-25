@@ -39,8 +39,11 @@ declare class Configurator {
   pages(...pageNumbers: number[]): this;
   enableDoubletap(enable: boolean): this;
   enableSwipe(enable: boolean): this;
+  fitEachPage(enable: boolean): this;
+  spacing(spacing: number): this;
   onLoad(
     onLoadCompleteListener: pdfviewer.listener.OnLoadCompleteListener
   ): this;
+  autoSpacing(enable: boolean): this; 
   swipeHorizontal(horizontal: boolean): this;
 }
