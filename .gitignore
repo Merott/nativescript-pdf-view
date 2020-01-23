@@ -1,3 +1,4 @@
+.npmrc
 *.js
 *.js.map
 *.log
