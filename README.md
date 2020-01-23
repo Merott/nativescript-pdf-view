@@ -46,3 +46,12 @@ registerElement('PDFView', () => PDFView);
 ## Demo
 
 Check out the [demo](./demo) folder for a demo application using this plugin. You can run the demo by executing `npm run demo.ios` and `npm run demo.android` from the root directory of the project.
+
+
+## Samples
+
+There are sample applications avalable:
+
+* *Plain TypeScript*: see [demo/](https://github.com/madmas/nativescript-pdf-view/tree/master/demo) folder in this repository
+* *NativeScript+Angular*: [nativescript-pdf-view-angular-sample](https://github.com/madmas/nativescript-pdf-view-angular-sample) repository
+* *NativeScript+VueJs*:  [nativescript-pdf-view-vue-sample](https://github.com/madmas/nativescript-pdf-view-vue-sample) repository
