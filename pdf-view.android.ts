@@ -60,6 +60,7 @@ export class PDFView extends PDFViewCommon {
       .fromUri(uri)
       .onLoad(this.onLoadHandler)
       .spacing(defaultSpacingDP)
+      .enableAnnotationRendering(this.enableAnnotationRendering)
       .fitEachPage(true)
       .load();
   }

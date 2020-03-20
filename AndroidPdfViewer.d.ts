@@ -37,6 +37,7 @@ declare class Configurator {
   load(): void;
   defaultPage(pageNumber: number): this;
   pages(...pageNumbers: number[]): this;
+  enableAnnotationRendering(enable: boolean): this;
   enableDoubletap(enable: boolean): this;
   enableSwipe(enable: boolean): this;
   fitEachPage(enable: boolean): this;

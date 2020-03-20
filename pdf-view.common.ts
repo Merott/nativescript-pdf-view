@@ -6,6 +6,11 @@ export abstract class PDFViewCommon extends View {
   public static loadEvent = 'load';
 
   /**
+   * Render annotations (such as comments, colors or forms) on Android
+   */
+  public enableAnnotationRendering: boolean;
+
+  /**
    * the source url of the PDF to show
    */
   public src: string;
@@ -21,6 +26,12 @@ export abstract class PDFViewCommon extends View {
     }
   }
 }
+
+export const enableAnnotationRenderingProperty = new Property<PDFViewCommon, boolean>({
+  name: 'enableAnnotationRendering',
+  defaultValue: false,
+});
+enableAnnotationRenderingProperty.register(PDFViewCommon);
 
 export const srcProperty = new Property<PDFViewCommon, string>({
   name: 'src',

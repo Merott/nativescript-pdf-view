@@ -23,4 +23,5 @@ export class MainViewModel extends Observable {
   }
 
   private current = 0;
+  private enableAnnotationRendering = true;
 }

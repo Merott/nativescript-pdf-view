@@ -4,6 +4,6 @@
  loaded="pageLoaded">
   <FlexboxLayout flexDirection="column">
     <Button height="70" text="Show Another!" tap="{{ changePDF }}" />
-    <pdf:PDFView flexGrow="1" src="{{ pdfUrl }}" load="{{ onLoad }}" />
+    <pdf:PDFView flexGrow="1" src="{{ pdfUrl }}" load="{{ onLoad }}" enableAnnotationRendering="{{ enableAnnotationRendering }}" />
   </FlexboxLayout>
 </Page>
