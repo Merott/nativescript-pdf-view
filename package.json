@@ -63,7 +63,7 @@
     "husky": "^0.13.3",
     "prompt": "~1.0.0",
     "rimraf": "~2.6.1",
-    "semantic-release": "^6.3.6",
+    "semantic-release": "^17.2.3",
     "tns-core-modules": "~3.0.0",
     "tns-platform-declarations": "^3.0.1",
     "tslint": "^5.2.0",
