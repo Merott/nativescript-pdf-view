@@ -1,3 +1,3 @@
 # No longer maintained
 
-Please check out the [forked version by @madmas](https://github.com/madmas/nativescript-pdf-view).
+Please check out the [official fork, @nativescript/pdf]([https://github.com/madmas/nativescript-pdf-view](https://github.com/NativeScript/plugins/tree/main/packages/pdf)).
